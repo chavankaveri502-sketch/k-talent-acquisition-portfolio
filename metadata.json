@@ -1,0 +1,6 @@
+{
+  "name": "Performance Review Dashboard",
+  "description": "An interactive, curated Performance Review Dashboard for a Talent Acquisition professional featuring a premium soft-green layout, interactive recruitment metrics, custom visual timelines, skills matrices, and project milestones.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

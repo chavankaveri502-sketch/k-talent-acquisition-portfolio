@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..905;1,14..32,100..905&family=Space+Grotesk:wght@300..700&family=Lora:ital,wght@0,400..750;1,400..750&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom Pastel Palette: Lavender (primary) + Soft Pink (highlights) + Light Yellow (KPIs) */
+  --color-editorial-bg: #FAF6FD; /* Light lavender-kissed white base background */
+  --color-editorial-text: #3D334A; /* Highly readable deep violet-charcoal for optimal contrast */
+  --color-editorial-primary: #241635; /* Elegant deep plum for prominent display headings */
+  --color-editorial-sage: #B496D4; /* Soft lavender accent highlight */
+  --color-editorial-forest: #7D5FA5; /* Rich, elegant branding purple with high accessibility contrast */
+  --color-editorial-border: #E8DCF3; /* Delicate pastel lilac outer borders */
+  --color-editorial-accent-bg: #FFF0F4; /* Soft, delicate pastel Pink blocks for highlighted sections */
+  --color-editorial-chip-bg: #FFFBD0; /* Soft, delicate pastel Yellow for KPI cards & metrics */
+
+  /* Extra shades for the custom palette */
+  --color-pastel-pink-accent: #FFF0F4;
+  --color-pastel-yellow-accent: #FFFBD0;
+  --color-pastel-lavender-accent: #F4EBFC;
+}
+
+body {
+  background-color: var(--color-editorial-bg);
+  /* Light airy lavender-pink-yellow subtle radial gradient for beautiful backdrop styling */
+  background-image: radial-gradient(at 0% 0%, #FAF6FD 0px, transparent 50%),
+                    radial-gradient(at 100% 0%, #FFF0F4 0px, transparent 50%),
+                    radial-gradient(at 50% 100%, #FFFCE0 0px, transparent 50%);
+  font-family: var(--font-sans);
+  color: var(--color-editorial-text);
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+/* Custom delicate animation effects */
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.95;
+  }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 4s infinite ease-in-out;
+}
+
