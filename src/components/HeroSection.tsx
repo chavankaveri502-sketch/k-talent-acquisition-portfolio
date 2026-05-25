@@ -1,12 +1,13 @@
 import React from 'react';
-import { Briefcase, MapPin, Mail, Sparkles, Award, BarChart3, Linkedin } from 'lucide-react';
+import { Briefcase, MapPin, Mail, Sparkles, Award, BarChart3, Linkedin, FileText } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface HeroSectionProps {
   onNavigateToAnalytics: () => void;
+  onOpenResume: () => void;
 }
 
-export default function HeroSection({ onNavigateToAnalytics }: HeroSectionProps) {
+export default function HeroSection({ onNavigateToAnalytics, onOpenResume }: HeroSectionProps) {
   return (
     <div className="relative overflow-hidden bg-white rounded-3xl border border-editorial-border p-6 md:p-10 mb-8 shadow-[0_4px_20px_rgba(107,142,103,0.04)]">
       {/* Decorative ambient soft sage blobs */}
@@ -27,7 +28,7 @@ export default function HeroSection({ onNavigateToAnalytics }: HeroSectionProps)
               Kaveri Chavan
             </h1>
             <p className="text-sm font-semibold tracking-[0.2em] uppercase text-editorial-sage font-sans">
-              Talent Acquisition | HR | Strategic Hiring
+              Talent Acquisition | Strategic Hiring
             </p>
           </div>
 
@@ -35,13 +36,7 @@ export default function HeroSection({ onNavigateToAnalytics }: HeroSectionProps)
             “Building high-impact teams through strategic hiring, process improvement, and people-first initiatives.”
           </p>
 
-          <p className="text-xs font-mono tracking-wider text-[#8A958D] uppercase flex flex-wrap items-center gap-x-3 gap-y-1 pt-1">
-            <span className="flex items-center gap-1"><Briefcase className="w-3.5 h-3.5 text-editorial-sage" /> TA Directives</span>
-            <span>•</span>
-            <span className="flex items-center gap-1"><Award className="w-3.5 h-3.5 text-editorial-sage" /> Strategic Sourcing</span>
-            <span>•</span>
-            <span className="flex items-center gap-1"><Sparkles className="w-3.5 h-3.5 text-editorial-sage" /> Org Operations</span>
-          </p>
+
 
           <div className="flex flex-wrap gap-3 pt-2">
             <a 
@@ -60,6 +55,13 @@ export default function HeroSection({ onNavigateToAnalytics }: HeroSectionProps)
               <Linkedin className="w-3.5 h-3.5 text-editorial-sage" />
               <span>LinkedIn</span>
             </a>
+            <button 
+              onClick={onOpenResume}
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#FFF0F4] text-[#7D5FA5] hover:text-[#5B4181] hover:bg-[#FCA7BB]/10 rounded-xl text-xs font-semibold tracking-wider uppercase border border-[#EADBFC] transition-colors shadow-xs cursor-pointer font-sans"
+            >
+              <FileText className="w-3.5 h-3.5 text-[#7D5FA5]" />
+              <span>View Resume</span>
+            </button>
             <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-editorial-accent-bg text-[#4A504B] rounded-xl text-xs font-medium border border-[#DDE3DC]">
               <MapPin className="w-3.5 h-3.5 text-editorial-sage" />
               <span className="font-sans">Bengaluru, India</span>

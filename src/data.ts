@@ -8,25 +8,25 @@ export const TIMELINE_DATA: TimelineEvent[] = [
     type: "fulltime",
     location: "Bengaluru, India",
     description: [],
-    skills: ["Tech Sourcing", "Competency Mapping", "Recruitment Strategy", "Campus Hiring", "Stakeholder Syncs"]
+    skills: ["Tech Sourcing", "Competency Mapping", "Recruitment Strategy", "Leadership Hiring", "Stakeholder Syncs"]
   },
   {
-    role: "TA Intern",
+    role: "Talent Acquisition Intern",
     company: "Jar",
-    duration: "Mar 2025 – Aug 2025",
+    duration: "Mar 2025 – Jul 2025",
     type: "intern",
     location: "Bengaluru, India",
     description: [],
-    skills: ["Talent Sourcing", "Candidate Experience", "ATS Management", "LinkedIn Recruiter"]
+    skills: ["Talent Sourcing", "Onboarding Coordination", "Looker Studio", "Google Sheets", "Process Automation"]
   },
   {
-    role: "HR Intern",
+    role: "Intern- Talent Acquisition",
     company: "Zepto",
-    duration: "Sep 2024 – Mar 2025",
+    duration: "Sep 2024 – March 2025",
     type: "intern",
-    location: "Mumbai, India",
+    location: "Bengaluru, India",
     description: [],
-    skills: ["Onboarding Coordination", "Interview Coordination", "ATS Management", "IT Sourcing"]
+    skills: ["IT Sourcing", "Sourcing & Screening", "ATS Management", "Talent Pipelining", "Stakeholder Management"]
   }
 ];
 
@@ -103,16 +103,12 @@ export const GRADE_DISTRIBUTION = [
 
 export const SKILL_CATEGORIES = [
   {
-    category: "Technical & Core Sourcing",
-    skills: ["Tech Hiring", "Talent Sourcing", "LinkedIn Recruiter", "Instahyre", "Naukri", "Candidate Screening"]
+    category: "Recruitment & Talent Strategy",
+    skills: ["Talent Acquisition Strategy", "Stakeholder Management", "Cross-functional Collaboration", "Process Optimization", "Leadership Hiring"]
   },
   {
-    category: "Recruitment Strategy",
-    skills: ["Campus Hiring", "Recruitment Strategy", "Competency Mapping", "Employer Branding", "Stakeholder Management"]
-  },
-  {
-    category: "Operations & Tools",
-    skills: ["ATS Management", "Onboarding Coordination", "Data-Driven Hiring", "Hiring Analytics", "Looker Studio"]
+    category: "Operations & Analytics Tools",
+    skills: ["Looker Studio", "Microsoft Excel", "Effective Communication"]
   }
 ];
 

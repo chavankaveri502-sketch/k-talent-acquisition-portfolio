@@ -76,6 +76,17 @@ export default function TimelineSection() {
                   </div>
                 </div>
 
+                {/* Event Description Bullets */}
+                {event.description && event.description.length > 0 && (
+                  <ul className="space-y-1.5 list-disc list-inside text-stone-600 text-[12.5px] leading-relaxed font-sans pl-1 pt-1">
+                    {event.description.map((bullet, bIdx) => (
+                      <li key={bIdx} className="marker:text-editorial-sage">
+                        <span className="text-stone-700">{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
                 {/* Event Tags */}
                 <div className="pt-2 flex flex-wrap gap-1.5">
                   {event.skills.map((skill, sIdx) => (

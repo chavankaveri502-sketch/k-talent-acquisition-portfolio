@@ -298,10 +298,6 @@ export default function AnalyticsHub() {
               </div>
             </div>
           </div>
-          
-          <div className="p-3 bg-[#FFF0F4] border border-[#EADBFC]/60 rounded-xl text-[10px] text-[#7D5FA5] font-sans leading-relaxed text-center mt-2 font-medium">
-            📉 Average decline rate is kept within standard industry tolerances (13% - 19%).
-          </div>
         </div>
 
         {/* Complete Team Sourcing Outcomes transformed into a Pie Chart with Interactive Legends and Metrics Filters */}

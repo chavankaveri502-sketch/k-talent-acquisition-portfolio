@@ -2,24 +2,25 @@ import React, { useState, useRef } from 'react';
 import HeroSection from './components/HeroSection';
 import TimelineSection from './components/TimelineSection';
 import AnalyticsHub from './components/AnalyticsHub';
-import ProjectsSection from './components/ProjectsSection';
 import ExecutiveSummary from './components/ExecutiveSummary';
+import ResumeModal from './components/ResumeModal';
 import { 
   Presentation, 
   BarChart4, 
-  Sparkles, 
+  Sparkles,
+  FileText,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function App() {
   // Navigation active state: 'all' (continuous deck) or 'analytics' (deep dive metrics)
   const [activeTab, setActiveTab] = useState<'all' | 'analytics'>('all');
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
   
   // Create refs for smooth scrolls
   const profileRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
   const analyticsRef = useRef<HTMLDivElement>(null);
-  const projectsRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
     setActiveTab('all');
@@ -32,7 +33,6 @@ export default function App() {
     { label: 'Profile', ref: profileRef },
     { label: 'Timeline', ref: timelineRef },
     { label: 'Analytics', ref: analyticsRef },
-    { label: 'Projects', ref: projectsRef },
   ];
 
   return (
@@ -84,6 +84,15 @@ export default function App() {
               </button>
             </div>
 
+            {/* Resume activation button */}
+            <button
+              onClick={() => setIsResumeOpen(true)}
+              className="inline-flex items-center gap-1.5 py-1.5 px-3.5 rounded-xl text-xs font-bold bg-[#FFF0F4] hover:bg-[#FCA7BB]/15 text-[#7D5FA5] hover:text-[#5B4181] border border-[#EADBFC] transition-all cursor-pointer shadow-3xs font-sans uppercase tracking-wider"
+            >
+              <FileText className="w-3.5 h-3.5" />
+              <span>Resume</span>
+            </button>
+
             {/* Quick-anchors when in Presentation View */}
             {activeTab === 'all' && (
               <div className="hidden lg:flex items-center gap-1 border-l border-editorial-border pl-3">
@@ -122,7 +131,10 @@ export default function App() {
             >
               {/* Profile Hero section */}
               <div ref={profileRef} className="scroll-mt-24">
-                <HeroSection onNavigateToAnalytics={() => setActiveTab('analytics')} />
+                <HeroSection 
+                  onNavigateToAnalytics={() => setActiveTab('analytics')} 
+                  onOpenResume={() => setIsResumeOpen(true)}
+                />
               </div>
 
               {/* Career Timeline Section */}
@@ -137,11 +149,6 @@ export default function App() {
                   <span>Interactive Sourcing DB Replica Included Below</span>
                 </div>
                 <AnalyticsHub />
-              </div>
-
-              {/* Curated Projects & Initiatives */}
-              <div ref={projectsRef} className="scroll-mt-24 pt-4">
-                <ProjectsSection />
               </div>
 
               {/* Executive closing block */}
@@ -193,11 +200,11 @@ export default function App() {
       <footer className="border-t border-[#EADBFC] py-10 px-4 md:px-8 bg-[#F4EBFC] mt-16 text-center text-xs text-stone-500 font-mono">
         <div className="max-w-7xl mx-auto space-y-2">
           <p>© 2026 Kaveri Chavan. Talent Acquisition Portfolio.</p>
-          <p className="text-[10px] text-[#7D5FA5]">
-            Engineered using responsive React + Tailwind CSS • Pastel Performance Dashboard
-          </p>
         </div>
       </footer>
+
+      {/* Interactive Resume View popup */}
+      <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
 
     </div>
   );
