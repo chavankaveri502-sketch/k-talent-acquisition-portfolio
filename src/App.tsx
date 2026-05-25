@@ -4,6 +4,7 @@ import TimelineSection from './components/TimelineSection';
 import AnalyticsHub from './components/AnalyticsHub';
 import ExecutiveSummary from './components/ExecutiveSummary';
 import ResumeModal from './components/ResumeModal';
+import ProjectsSection from './components/ProjectsSection';
 import { 
   Presentation, 
   BarChart4, 
@@ -20,6 +21,7 @@ export default function App() {
   // Create refs for smooth scrolls
   const profileRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
   const analyticsRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
@@ -33,6 +35,7 @@ export default function App() {
     { label: 'Profile', ref: profileRef },
     { label: 'Timeline', ref: timelineRef },
     { label: 'Analytics', ref: analyticsRef },
+    { label: 'Projects', ref: projectsRef },
   ];
 
   return (
@@ -146,9 +149,14 @@ export default function App() {
               <div ref={analyticsRef} className="scroll-mt-24 pt-4">
                 <div className="bg-editorial-accent-bg p-1.5 rounded-full border border-editorial-border inline-flex items-center gap-2 mb-4 text-xs text-editorial-forest font-medium pl-3 pr-2.5 shadow-3xs">
                   <span className="w-1.5 h-1.5 rounded-full bg-editorial-sage block animate-ping" />
-                  <span>Interactive Sourcing DB Replica Included Below</span>
+                  <span>Interactive Sourcing Database</span>
                 </div>
                 <AnalyticsHub />
+              </div>
+
+              {/* Projects & Initiatives Section */}
+              <div ref={projectsRef} className="scroll-mt-24 pt-4">
+                <ProjectsSection />
               </div>
 
               {/* Executive closing block */}

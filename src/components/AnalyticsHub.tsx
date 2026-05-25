@@ -157,7 +157,7 @@ export default function AnalyticsHub() {
             </span>
             <span className="text-[10px] text-stone-500 font-mono flex items-center gap-1">
               <Clock className="w-3 h-3 text-[#A68CC6]" />
-              Sourcing Window: 17 Mar 2025 – 25 May 2026
+              Sourcing Window: March 2025 – May 2026
             </span>
           </div>
           <h3 className="text-[10px] uppercase tracking-[0.2em] text-[#7D5FA5] font-semibold mt-2.5">Analytical Insights</h3>

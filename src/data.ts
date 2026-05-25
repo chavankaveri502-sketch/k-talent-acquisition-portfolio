@@ -159,7 +159,7 @@ export const PROJECTS_DATA: ProjectInitiative[] = [
   },
   {
     title: "Growth Hiring Program (Ongoing)",
-    category: "High-Volume Scaling",
+    category: "Growth Program",
     outcome: "Currently working on designing and executing a Growth hiring program aimed at building a streamlined, high-volume hiring model for growth-focused roles, enabling faster and more efficient talent acquisition compared to traditional hiring processes.",
     details: [
       "Architecting highly scalable, programmatic candidate pipelines to compress time-to-hire metrics.",

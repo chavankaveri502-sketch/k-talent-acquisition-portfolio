@@ -95,7 +95,7 @@ export default function HeroSection({ onNavigateToAnalytics, onOpenResume }: Her
           >
             <span className="text-[9px] font-semibold text-editorial-forest group-hover:text-editorial-primary block uppercase tracking-widest">Sourcing Database</span>
             <div className="pt-2 flex items-center justify-between">
-              <span className="text-xs font-semibold uppercase tracking-wider block font-sans">Looker Hub</span>
+              <span className="text-xs font-semibold uppercase tracking-wider block font-sans">Analytics</span>
               <BarChart3 className="w-4 h-4 text-[#7D5FA5] group-hover:text-white transition-colors" />
             </div>
           </div>

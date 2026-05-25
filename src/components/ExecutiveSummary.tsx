@@ -23,7 +23,7 @@ export default function ExecutiveSummary() {
           </h3>
 
           <p className="text-stone-600 text-sm leading-relaxed font-sans">
-            Whether partnering directly with startup founders or high-impact corporate leads, my goal is to implement automated administrative support coordinates, reducing administrative latency while multiplying early-career engagement loops.
+            Whether partnering with startup founders or corporate leaders, my goal is to automate recruitment operations, eliminate administrative delays, and design impactful early-career programs.
           </p>
         </div>
 
